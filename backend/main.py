@@ -2,15 +2,27 @@ from langchain_groq import ChatGroq
 from dotenv import load_dotenv 
 import os 
 from pprint import pprint as pp 
-from testing.agents import EntityExtractorAgent  , ChitChatAgent , TimeExtractorAgent , HumourousAgent 
+from agents import EntityExtractorAgent  , ChitChatAgent , TimeExtractorAgent , HumourousAgent 
 from fastapi import FastAPI 
 from api_models import UserQueryModel , WidgetData
 from data_apis import * 
 import pandas as pd 
 from datetime import datetime , timedelta
+import uvicorn
+from fastapi.middleware.cors import CORSMiddleware
 
 app =  FastAPI() 
 
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 load_dotenv()
 GROQ_API_KEY = os.getenv('GROQ_API_KEY')
@@ -93,3 +105,7 @@ def get_data_for_city(widget_data : WidgetData ):
     print(daily_mean_df)
     daily_mean_df.drop(['time'] , axis=1 , inplace=True)
     return {'weather data' : daily_mean_df.to_dict() , 'weather_units' : weather_units} 
+
+
+if __name__ == "__main__":
+    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
