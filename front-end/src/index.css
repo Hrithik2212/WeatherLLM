@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&family=Work+Sans&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.my-font{
+  font-family: 'Work Sans', sans-serif;
+}
+.Staatliches{
+  font-family: 'Staatliches', sans-serif;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.user-input-bg{
+  width: 100%;
+ 
+  padding: 15px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+
+.user-input-warrper{
+  display: flex;
+
+  border-radius: 20px;
+
+  height: 100%;
+  align-items: flex-end;
+  padding: 5px;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  
+}
+
+.bot-input-bg{
+  width: 100%;
+  background-color: transparent;
+  flex-wrap: wrap;
+  padding: 10px;
+  height: fit-content;
+  
+  display: flex;
+  justify-content: center;
+}
+.bot-input-warrper{
+  display: block;
+  
+  background-color: transparent;
+  height: 100%;
+  
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  text-wrap: wrap;
+}
+
+.bot-input-warrper:last-child{
+  margin-bottom: 20px;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading-spinner {
+  
+  animation: spinner 1.5s linear infinite;
+}
+@keyframes App-logo-spin {
+  0%,100% {
+   transform:translateY(0);
+  }
+  50% {
+    transform:translateY(-10px);
+  }
+}
+
+.floating{
+  animation: App-logo-spin 1s infinite ease-in-out ;
+  margin: 0;
+  
+}
+
+.dot1{
+  animation-delay: 0s;
+}
+
+.dot2{
+  animation-delay: 0.2s;
+  
+}
+.dot3{
+  animation-delay: 0.4s;
+}
