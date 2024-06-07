@@ -64,6 +64,9 @@ def weather_query(request:UserQueryModel) :
     if not entities['forecast'] : 
         date_range['start_date'] = str(datetime.now())[:10]  
     # print(date_range)
+    if entities['history'] : 
+        response = humour_agent.chat(query , context = "We don't have acces to any hsitorical data and thus won't be able to answer the user's query")
+        return {'response' : response}
     geo_data = get_coordinates_from_city(city) 
     try : 
         lat , long = geo_data 
