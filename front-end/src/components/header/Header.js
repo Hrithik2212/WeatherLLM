@@ -6,8 +6,8 @@ const Header = () => {
     <ContentWrapper>
         <div className='min-h-[450px] flex flex-col gap-5 justify-end w-full max-sm:mb-10 p-5 md:p-20'>
             <div className='flex flex-col gap-3'>
-              <h1 className='text-[70px] text-[#3c4d55] font-bold max-md:text-[30px]'>SRM Leave Application Assistant Chat Bot</h1>
-              <p className='md:w-[80%] text-[#003554] text-[16px]  2xl:text-[24px] '>Welcome to SRM Leave Portal , our chat bot will assist you in your enquiry regarding staff leave applications .</p>
+              <h1 className='text-[70px] text-[#3c4d55] font-bold max-md:text-[30px]'>Weather Assistant Bot</h1>
+              <p className='md:w-[80%] text-[#003554] text-[16px]  2xl:text-[24px] '>Welcome to Sentinent Scripts Humorous Weather Assistant Bot Demo.</p>
             </div>
             <div className='flex flex-col gap-3'>
               <h1 className='text-[#3c4d55] font-bold text-[38px] max-md:text-[30px]'>Ready, Set, Chat!</h1>

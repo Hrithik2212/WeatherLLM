@@ -77,23 +77,23 @@ const Chat = () => {
     return (
         <div className='overflow-hidden '>
             <div className='flex h-screen'>
-                <div className='bg-[#003554] w-[30%] flex justify-center items-center h-full max-md:hidden'>
+                <div className='bg-[#160042] w-[30%] flex justify-center items-center h-full max-md:hidden'>
                     <div className='flex h-full w-full flex-cols justify-center items-center'>
-                        <h1 className='text-[40px] text-white font-bold max-md:text-[20px] text-center'>SRM Portal Chat Bot</h1>
+                        <h1 className='text-[40px] text-white font-bold max-md:text-[20px] text-center'>Weather Assistant Bot</h1>
                     </div>
                 </div>
-                <div className='bg-[#3c4d55] min-h-[90%] flex w-[70%] max-md:w-full relative justify-center h-full'>
+                <div className='bg-[#b4c6d0] min-h-[90%] flex w-[70%] max-md:w-full relative justify-center h-full'>
                     <div ref={scrollContainerRef} className='overflow-y-scroll transform transition-all ease-in-out duration-500 max-h-screen py-20 hide-scrollbar max-md:w-full sm:w-[900px] md:w-[90%] 2xl:w-[70%]'>
                         <div className='mb-5'>
                             <div className='bot-input-bg bg-transparent'>
                                 <div className='bot-input-wrapper w-[90%] md:w-[70%]'>
-                                    <h1 className='m-3'>Hi, I am your virtual leave application assistant. I am here to help you with information about leave types and eligibility criteria. Feel free to ask any queries.</h1><br />
+                                    <h1 className='m-3'>Hi, I am your Weather Assistant , how may I help you.</h1><br />
                                 </div>
                             </div>
                             {userMessages.map((e, key) =>
                                 <div key={key} className='w-full'>
                                     <div className='user-input-bg'>
-                                        <div className='user-input-wrapper bg-[#2e373b] w-[90%] md:w-[70%]'>
+                                        <div className='user-input-wrapper bg-[#2e373b] text-white w-[90%] md:w-[70%]'>
                                             <h1 className='m-3 break-all'>{e}</h1><br />
                                         </div>
                                     </div>
@@ -120,7 +120,7 @@ const Chat = () => {
                                     onChange={handleInputChange}
                                     required
                                 />
-                                {!loading && <button type='submit' className='absolute bottom-[1%] pointer bg-[#477590] p-1 rounded-lg m-2 right-0 text-white'><IoSend size={30}/></button>}
+                                {!loading && <button type='submit' className='absolute bottom-[1%] pointer bg-[#160042] p-1 rounded-lg m-2 right-0 text-white'><IoSend size={30}/></button>}
                                 {loading && <div className='absolute bottom-[1%] bg-[#477590] p-1 rounded-lg m-2 right-0 text-white'><AiOutlineLoading3Quarters className='loading-spinner' size={30}/></div>}
                             </form>
                         </div>

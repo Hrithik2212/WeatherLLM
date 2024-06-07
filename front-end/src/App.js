@@ -6,7 +6,7 @@ const App = () => {
     <div className='relative'>
       
       <Home/>
-      <PopUp/>
+      {/* <PopUp/> */}
       
       
 
