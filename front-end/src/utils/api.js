@@ -1,2 +1,1 @@
-
-export const BASE_API="http://65.0.103.88"
+export const BASE_API="http://127.0.0.1:8000"
