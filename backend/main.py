@@ -71,11 +71,13 @@ def weather_query(request:UserQueryModel) :
     try : 
         lat , long = geo_data 
     except : 
+        print(geo_data['error'])
         return {'error' : geo_data['error'] , "Type" : "Weatgher API error"}
     
     weather_data = get_weather_data((lat , long), date_range['start_date'], date_range['end_date'])
     # print(weather_data)
     weather_data = aggreagate_weather_data_by_days(weather_data=weather_data) 
+    print(weather_data)
     # Implement spell check and city map 
     response = humour_agent.chat(query , context = weather_data)
     return {'response' : response}
